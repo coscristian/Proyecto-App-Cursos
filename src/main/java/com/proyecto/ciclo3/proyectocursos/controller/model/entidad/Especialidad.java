@@ -25,14 +25,18 @@ public class Especialidad {
     @GeneratedValue(strategy = GenerationType.AUTO)    
     private Long id;
 
-    @Column(name="nombre", nullable=false, length=10)
+    @Column(name="nombre", nullable=false, length=100)
     private String nombre;
 
-    @Column(name="descripcion", length=50)
+    @Column(name="descripcion", length=100)
     private String descripcion;
 
     // Relación de uno a muchos
     @OneToMany(mappedBy="especialidad")
     private List<Curso> cursos;
+
+    public Especialidad(String nombre) {
+        this.nombre = nombre;
+    }
 
 }

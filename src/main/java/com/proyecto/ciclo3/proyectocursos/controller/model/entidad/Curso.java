@@ -15,9 +15,10 @@ import lombok.NoArgsConstructor;
 public class Curso {
     @Id // Llave primaria de la tabla
     private Long id;
+
     private String nombre;
     private String descripcion;
-    private Integer especialidadId;
+   // private Integer especialidadId;
     private String urlImagen;
 
     @ManyToOne // Relacion de muchos a uno

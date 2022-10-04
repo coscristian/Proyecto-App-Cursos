@@ -50,7 +50,6 @@ public class ProyectoCursosController {
             var especialidadCursos = this.especialidadService.getCursosPorEspecialidad(id);
             model.addAttribute("cursos", especialidadCursos);
         }
-
         return "catalogoEspecialidades";
     }
 }
