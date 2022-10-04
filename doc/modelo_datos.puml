@@ -1,0 +1,24 @@
+@startuml
+
+class Especialidad {
+    - String nombre
+    - String descripcion
+    - Integer id
+    + get()
+    + set()
+}
+
+class Curso {
+    - String nombre
+    - Integer id
+    - String descripcion
+    - Integer especialidadId
+    - String urlImagen
+    + get()
+    + set()
+}
+
+Especialidad "1" o-- "*" Curso
+
+
+@enduml
