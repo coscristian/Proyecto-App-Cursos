@@ -18,6 +18,17 @@ class Curso {
     + set()
 }
 
+class User {
+    - String name
+    - String password
+    - String name
+    - String email
+    - Boolean active
+    - Boolean admin
+    + set()
+    + get()
+}
+
 Especialidad "1" o-- "*" Curso
 
 

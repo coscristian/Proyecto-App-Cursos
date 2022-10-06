@@ -5,7 +5,6 @@ import java.util.Arrays;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.stereotype.Component;
 
 import com.proyecto.ciclo3.proyectocursos.controller.model.entidad.Curso;
 import com.proyecto.ciclo3.proyectocursos.controller.model.entidad.Especialidad;
@@ -120,11 +119,7 @@ public class ProyectocursosApplication {
 							   "https://www.beonlinesoluciones.com/wp-content/uploads/2021/02/publicidad-instagram-ads.png",
 							   mercadeoDigital)
 			);
-
 			cursoRepositorio.saveAll(cursos);
-
-			
-
 		}	
 	}
 }
