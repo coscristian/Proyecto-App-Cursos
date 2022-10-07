@@ -34,13 +34,16 @@ public class ProyectocursosApplication {
 
 		@Override
 		public void run(String... args) throws Exception {
-			loadData();
-			loadUsers();
+			//loadData();
+			//loadUsers();
 		}
 
 		public void loadUsers() {
 			var usuario = new Usuario("admin", "admin123", "Administrador", "admin@eduonline.com", true, true);
+			var usuarioNoAdmin = new Usuario("coscristian","quesada123", "Cristian","crisquesadaco@gmail.com", true, false);
+			
 			usuarioRepositorio.save(usuario);
+			usuarioRepositorio.save(usuarioNoAdmin);
 		}
 	
 		private void loadData() {

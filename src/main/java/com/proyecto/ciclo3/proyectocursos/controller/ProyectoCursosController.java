@@ -5,15 +5,30 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import com.proyecto.ciclo3.proyectocursos.controller.service.CursoService;
 import com.proyecto.ciclo3.proyectocursos.controller.service.EspecialidadService;
 
 @Controller
 public class ProyectoCursosController {
 
     private EspecialidadService especialidadService;
+    private CursoService cursoService;
 
-    public ProyectoCursosController(EspecialidadService especialidadService) {
+    public ProyectoCursosController(EspecialidadService especialidadService, CursoService cursoService) {
         this.especialidadService = especialidadService;
+        this.cursoService = cursoService;
+    }
+
+    @GetMapping("/gestioncursos")
+    public String goToGestionCursos(Model model) {
+        
+        var cursos = this.cursoService.getCursos();
+        var especialidades = this.especialidadService.getEspecialidades();
+        
+        model.addAttribute("especialidades", especialidades);
+        model.addAttribute("cursos", cursos);
+
+        return "gestioncursos";
     }
 
     @GetMapping("/")

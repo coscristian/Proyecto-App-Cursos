@@ -8,4 +8,6 @@ import com.proyecto.ciclo3.proyectocursos.controller.model.entidad.Curso;
 
 public interface CursoRepositorio extends JpaRepository<Curso, Long>{
     List<Curso> findAllByEspecialidadId(Long especialidadId);
+
+    //List<Curso> findAll();
 }
