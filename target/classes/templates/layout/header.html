@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="header" class="d-flex align-items-center" th:fragment="header">
+        <div class="container d-flex align-items-center justify-content-between">
+            <h1 class="logo"><a href="index.html">EDUONLINE<span>.</span></a></h1>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="/">Home</a></li>
+                    <li><a class="nav-link scrollto" href="/catalogoEsp">Especialidades</a></li>
+                    <li><a class="nav-link scrollto" href="/contacto">Contacto</a></li>
+                    <li id="login-link" class="nav-item">
+                        <a id="login-link" class="nav-link fw-bold py-1 px-0" href="/iniciosesion">Iniciar</a>
+                    </li>
+                    <li id="logout-link" class="nav-item dropdown">
+                        <a id="user-fullname" class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" style="color:blue;">
+                            Admin
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+
+                    </li>
+                    
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header> <!-- Fin Header -->
+</body>
+
+</html>

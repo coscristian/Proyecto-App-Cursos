@@ -15,6 +15,11 @@ public class ProyectoCursosController {
     public ProyectoCursosController(EspecialidadService especialidadService) {
         this.especialidadService = especialidadService;
     }
+
+    @GetMapping("/")
+    public String gotToIndex(Model model) {
+        return "index";
+    }
     
     @GetMapping("/iniciosesion")
     public String goToInicioSesion(Model model) {

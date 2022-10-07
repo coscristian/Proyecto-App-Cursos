@@ -5,11 +5,14 @@ import java.util.Arrays;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Component;
 
 import com.proyecto.ciclo3.proyectocursos.controller.model.entidad.Curso;
 import com.proyecto.ciclo3.proyectocursos.controller.model.entidad.Especialidad;
+import com.proyecto.ciclo3.proyectocursos.controller.model.entidad.Usuario;
 import com.proyecto.ciclo3.proyectocursos.controller.model.repositorio.CursoRepositorio;
 import com.proyecto.ciclo3.proyectocursos.controller.model.repositorio.EspecialidadRepositorio;
+import com.proyecto.ciclo3.proyectocursos.controller.model.repositorio.UsuarioRepositorio;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,16 +23,24 @@ public class ProyectocursosApplication {
 		SpringApplication.run(ProyectocursosApplication.class, args);
 	}
 
+	//@Component
 	@Data
 	@AllArgsConstructor
 	private class DataLoader implements CommandLineRunner {
 
 		private final EspecialidadRepositorio especialidadRepositorio;
 		private final CursoRepositorio cursoRepositorio;
+		private final UsuarioRepositorio usuarioRepositorio;
 
 		@Override
 		public void run(String... args) throws Exception {
 			loadData();
+			loadUsers();
+		}
+
+		public void loadUsers() {
+			var usuario = new Usuario("admin", "admin123", "Administrador", "admin@eduonline.com", true, true);
+			usuarioRepositorio.save(usuario);
 		}
 	
 		private void loadData() {
