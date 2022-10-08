@@ -25,6 +25,11 @@
     
     <main id="main" class="container">
         <h3>Cursos ofertados</h3>
+        
+        <button type="button" class="btn btn-primary">
+            <a href="/agregarcurso" style="color:white;" >Agregar Curso</a>
+        </button>
+
         <table class="table">
             <thead>
               <tr>
@@ -43,7 +48,11 @@
                         th:text="${especialidad.nombre}">
                             Otto
                 </td>
-                <td>Botón Eliminar</td>
+                <td>
+                    <button type="button" class="btn btn-danger">
+                        <a th:href="@{/gestioncursos/{id}(id=${curso.id})}" style="color:white;" >Eliminar</a>
+                    </button>    
+                </td>
               </tr>
             </tbody>
         </table>

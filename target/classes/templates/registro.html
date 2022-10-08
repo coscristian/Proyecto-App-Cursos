@@ -22,32 +22,38 @@
                       <div class="text-center">
                         <img src="img/inconoFInal-removebg-preview.png"
                           style="width: 185px;" alt="logo">
-                        <h4 class="mt-1 mb-5 pb-1">Bienvenido</h4>
+                        <h4 class="mt-1 mb-5 pb-1">Registro Usuario</h4>
                       </div>
       
-                      <form>
-                        <p>Por favor ingresa tus datos</p>
+                      <form method="post" action="/registro/registrado">
+                        <p>Por favor ingresa los datos para registrarte</p>
                         <div id="errorBox">
                         </div>
       
                         <div class="form-outline mb-4">
-                          <input type="email" id="floatingInput" class="form-control"
+                          <input name="nombreUsuario" type="text" id="floatingInput" class="form-control"
                             placeholder="Usuario" />
                           
                         </div>
-      
+
                         <div class="form-outline mb-4">
-                          <input type="password" id="floatingpassword" class="form-control" placeholder="Contraseña"/>
+                          <input name="contraseña" type="password" id="floatingpassword" class="form-control" placeholder="Contraseña"/>
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <input name="nombre" type="text" id="floatingInput" class="form-control"
+                              placeholder="Nombre" />
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <input name="correo" type="email" id="floatingInput" class="form-control"
+                              placeholder="Correo" />
                         </div>
       
                         <div class="text-center pt-1 mb-5 pb-1">
-                          <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 btn-inicio" onclick="login()" type="button">Iniciar Sesión</button><br>
-                          <a class="text-muted" href="#!">Olvidaste tu contraseña?</a>
-                        </div>
-      
-                        <div class="d-flex align-items-center justify-content-center pb-4">
-                          <p class="mb-0 me-2">No tienes una cuenta?</p>
-                          <button type="button" class="btn btn-outline-primary"><a href="/registro"> Registrate </a></button>
+                          <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 btn-inicio" type="submit">
+                            Registrarme
+                          </button><br>
                         </div>
       
                       </form>

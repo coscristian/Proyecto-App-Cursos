@@ -2,6 +2,7 @@ package com.proyecto.ciclo3.proyectocursos.controller.service;
 
 import java.util.List;
 
+import com.proyecto.ciclo3.proyectocursos.controller.dto.CursoRequest;
 import com.proyecto.ciclo3.proyectocursos.controller.dto.UsuarioRequest;
 import com.proyecto.ciclo3.proyectocursos.controller.dto.UsuarioResponse;
 

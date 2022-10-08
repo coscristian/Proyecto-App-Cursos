@@ -65,9 +65,9 @@ public class SeguridadServicioImpl implements SeguridadServicio {
 
     @Override
     public void crearUsuario(UsuarioRequest usuario) {
-        
+        System.out.println("hola2");
         var usuarioOp = usuarioRepositorio.findById(usuario.getNombreUsuario());
-        if(!usuarioOp.isPresent())
+        if(usuarioOp.isPresent())
             throw new RuntimeException("El usuario ya existe, no puede utilizar ese nombre de usuario");
         
         usuarioOp = usuarioRepositorio.findByCorreo(usuario.getCorreo());
@@ -119,5 +119,7 @@ public class SeguridadServicioImpl implements SeguridadServicio {
         usuarioRepositorio.save(usuario);
         
     }
+
+
     
 }

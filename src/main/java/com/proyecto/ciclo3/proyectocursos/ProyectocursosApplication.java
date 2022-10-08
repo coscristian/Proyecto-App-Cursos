@@ -48,12 +48,12 @@ public class ProyectocursosApplication {
 	
 		private void loadData() {
 
-			var desarrolloWeb = especialidadRepositorio.save(new Especialidad("Desarrollo Web"));
-			var desarrolloMovil = especialidadRepositorio.save(new Especialidad("Desarrollo Movil"));
-			var mercadeoDigital = especialidadRepositorio.save(new Especialidad("Mercadeo Digital"));
-			var frontend = especialidadRepositorio.save(new Especialidad("Frontend"));
-			var backend = especialidadRepositorio.save(new Especialidad("Backend"));
-			var diseñoInterfaces = especialidadRepositorio.save(new Especialidad("Diseño de interfaces"));
+			var desarrolloWeb = especialidadRepositorio.save(new Especialidad("Desarrollo Web", 1L));
+			var desarrolloMovil = especialidadRepositorio.save(new Especialidad("Desarrollo Movil", 2L));
+			var mercadeoDigital = especialidadRepositorio.save(new Especialidad("Mercadeo Digital", 3L));
+			var frontend = especialidadRepositorio.save(new Especialidad("Frontend", 4L));
+			var backend = especialidadRepositorio.save(new Especialidad("Backend", 5L));
+			var diseñoInterfaces = especialidadRepositorio.save(new Especialidad("Diseño de interfaces", 6L));
 
 			var cursos = Arrays.asList(
 				new Curso(1L, "Python", "Lorem",

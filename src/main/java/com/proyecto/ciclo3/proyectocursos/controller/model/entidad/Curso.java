@@ -1,7 +1,9 @@
 package com.proyecto.ciclo3.proyectocursos.controller.model.entidad;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
@@ -13,6 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Curso {
+    
     @Id // Llave primaria de la tabla
     private Long id;
 
@@ -21,6 +24,8 @@ public class Curso {
    // private Integer especialidadId;
     private String urlImagen;
 
-    @ManyToOne // Relacion de muchos a uno
+    @ManyToOne(cascade=CascadeType.ALL) // Relacion de muchos a uno
+    //@Cascade(CascadeType.SAVE_UPDATE)
+    @JoinColumn(name = "Especialidad_id")
     private Especialidad especialidad;
 }
