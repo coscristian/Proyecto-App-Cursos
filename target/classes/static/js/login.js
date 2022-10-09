@@ -47,6 +47,11 @@ const postToLogin = async (bodyObject) => {
     }
 };
 
+function logout() {
+    console.log("Hola");
+    localStorage.clear();
+  }
+
 const showError = (message) =>{
     alert(message, "danger");
 }
